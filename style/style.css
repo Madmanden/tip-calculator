@@ -1,0 +1,205 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  height: 100vh;
+  font-family: "Space Mono";
+  font-weight: 700;
+  line-height: 1.6;
+  color: #5e7a7d;
+}
+
+.container {
+  display: grid;
+  max-width: 375px;
+  margin: 0 auto;
+  padding-top: 144px;
+  background-color: #c5e4e7;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 32px 24px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 375px;
+}
+
+.heading {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ------------ BILL AREA --------------- */
+.bill-area {
+  padding-bottom: 32px;
+}
+
+/* ------------ SELECT TIP AREA --------------- */
+.tip-area {
+  padding-bottom: 32px;
+}
+
+.tip-area__tip-select {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.tip-amount {
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #00474b;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+  border: 2px solid transparent;
+}
+
+.tip-amount:hover {
+  /* background-color: #26c2ae; */
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+.active {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+.custom-tip {
+  color: #00474b;
+  background-color: #f3f9fa;
+  font-family: "Space Mono";
+  font-weight: 700;
+  font-size: 24px;
+  text-align: right;
+  outline: 0;
+  padding: 0.55rem;
+}
+.custom-tip:hover {
+  background: #f3f9fa;
+  /* border: 2px solid #26c2ae; */
+}
+
+.custom-tip::placeholder {
+  /* color: #00474b; */
+  text-align: center;
+}
+
+.custom-tip:focus::placeholder {
+  color: transparent;
+}
+
+/* ----------- NUMBER OF PEOPLE AREA --------------- */
+.number-people-area {
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+/* ----------- TOTAL AMOUNT AREA --------------- */
+.total-amount-area {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #00474b;
+  border-radius: 15px;
+  /* width: 327px; */
+  /* height: 257px; */
+  color: white;
+  line-height: 19px;
+}
+
+.total-amount-area__tip-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* >>>>>> change below names <<<<< */
+.person {
+  color: #7f9d9f;
+  font-size: 13px;
+}
+
+.tip-wrapper__tip-per-person,
+.tip-wrapper__total-per-person {
+  width: 60%;
+}
+
+.tip-wrapper__tip-amount-per-person,
+.tip-wrapper__total-amount-per-person {
+  width: 40%;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 32px;
+  color: #26c2ae;
+}
+
+/* -- RESET BUTTON -- */
+.btn-reset {
+  margin-top: 32px;
+  padding: 0.5rem;
+  background-color: #26c2ae;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  font-family: "Space Mono";
+  font-weight: 700;
+  font-size: 24px;
+  color: #00474b;
+}
+
+.btn-reset:hover {
+  background-color: #9fe8df;
+  cursor: pointer;
+}
+
+.btn-reset:focus {
+  outline: solid 2px #9fe8df;
+}
+
+/* ------------ INPUT STYLING --------------- */
+.bill-area__amount-input,
+.number-people-area__input {
+  width: 100%;
+  height: 48px;
+  padding-right: 18px;
+  padding-left: 18px;
+  background-color: #f3f9fa;
+  border-radius: 5px;
+  font-family: "Space Mono";
+  font-weight: 700;
+  font-size: 24px;
+  color: #00474b;
+  text-align: right;
+  cursor: pointer;
+  border: 2px solid transparent;
+  outline: solid 2px transparent;
+}
+
+.bill-area__amount-input:hover,
+.number-people-area__input:hover,
+.custom-tip:hover {
+  outline: solid 2px #26c2ae;
+}
+
+.bill-area__amount-input:focus,
+.number-people-area__input:focus,
+.custom-tip:focus {
+  outline: solid 2px #26c2ae;
+}
