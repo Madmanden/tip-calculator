@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="script.js" defer></script>
+  <title>Tip Calculator</title>
 </head>
 
 <body>
@@ -24,12 +26,12 @@
       <div class="tip-area">
         <h2 class="tip-area__heading heading">Select Tip %</h2>
         <div class="tip-area__tip-select">
-          <div class="tip-amount"><span class="five">5</span>%</div>
-          <div class="tip-amount"><span class="ten">10</span>%</div>
-          <div class="tip-amount active"><span class="fifteen">15</span>%</div>
-          <div class="tip-amount"><span class="twentyfive">25</span>%</div>
-          <div class="tip-amount"><span class="fifty">50</span>%</div>
-          <input class="tip-amount custom-tip" placeholder="Custom"></input>
+          <div class="tip-amount" data-tipvalue="5" tabindex="1">5%</div>
+          <div class="tip-amount" data-tipvalue="10" tabindex="1">10%</div>
+          <div class="tip-amount" data-tipvalue="15" tabindex="1">15%</div>
+          <div class="tip-amount" data-tipvalue="25" tabindex="1">25%</div>
+          <div class="tip-amount" data-tipvalue="50" tabindex="1">50%</div>
+          <input class="tip-amount custom-tip" placeholder="Custom" data-tipvalue="custom"></input>
         </div>
       </div>
       <div class="number-people-area">
@@ -45,7 +47,7 @@
             <p>Tip Amount</br>
               <span class="person">/ person</span></p>
           </div>
-          <div class="tip-wrapper__tip-amount-per-person">123</div>
+          <div class="tip-wrapper__tip-amount-per-person"></div>
         </div>
 
         <div class="total-amount-area__tip-wrapper">
@@ -53,7 +55,7 @@
             <p>Total</br>
               <span class="person">/ person</span></p>
           </div>
-          <div class="tip-wrapper__total-amount-per-person">456</div>
+          <div class="tip-wrapper__total-amount-per-person"></div>
         </div>
 
         <button class="btn-reset">RESET</button>
