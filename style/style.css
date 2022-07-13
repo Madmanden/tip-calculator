@@ -2,7 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  -moz-osx-font-smoothing: grayscale;
+  /* Firefox */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -19,11 +20,18 @@ body {
   color: #5e7a7d;
 }
 
+.logo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 144px;
+}
+
 .container {
   display: grid;
+  place-content: center;
   max-width: 375px;
   margin: 0 auto;
-  padding-top: 144px;
   background-color: #c5e4e7;
 }
 
@@ -92,6 +100,7 @@ body {
   outline: 0;
   padding: 0.55rem;
 }
+
 .custom-tip:hover {
   background: #f3f9fa;
   /* border: 2px solid #26c2ae; */
@@ -130,7 +139,6 @@ body {
   justify-content: space-between;
 }
 
-/* >>>>>> change below names <<<<< */
 .person {
   color: #7f9d9f;
   font-size: 13px;
