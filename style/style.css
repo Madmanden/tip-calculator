@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
-  height: 100vh;
+  height: 100%;
   font-family: "Space Mono";
   font-weight: 700;
   line-height: 1.6;
@@ -103,7 +103,6 @@ body {
 
 .custom-tip:hover {
   background: #f3f9fa;
-  /* border: 2px solid #26c2ae; */
 }
 
 .custom-tip::placeholder {
@@ -197,17 +196,80 @@ body {
   text-align: right;
   cursor: pointer;
   border: 2px solid transparent;
-  outline: solid 2px transparent;
+  outline: 2px solid transparent;
 }
 
 .bill-area__amount-input:hover,
 .number-people-area__input:hover,
 .custom-tip:hover {
-  outline: solid 2px #26c2ae;
+  outline: 2px solid #26c2ae;
 }
 
 .bill-area__amount-input:focus,
 .number-people-area__input:focus,
 .custom-tip:focus {
-  outline: solid 2px #26c2ae;
+  outline: 2px solid #26c2ae;
+}
+
+.error {
+  outline: 2px solid red;
+}
+
+/* ------------ MEDIA QUERIES --------------- */
+@media screen and (min-width: 920px) {
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: initial;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .first {
+    width: 379px;
+    margin-right: 24px;
+    margin: auto;
+    height: 388px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .second {
+    width: 413px;
+    margin-left: 24px;
+    height: 417px;
+  }
+
+  .total-amount-area {
+    height: 100%;
+  }
+
+  .btn-reset {
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .bill-area,
+  .tip-area,
+  .number-people-area {
+    padding-bottom: 5px;
+  }
+
+  .tip-area__tip-select {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 }
