@@ -67,8 +67,8 @@ reset.addEventListener("click", () => {
   bill.value = "";
   customInput.value = "";
   numberOfPeopleEl.value = "";
-  tipPerPersonEl.innerText = "";
-  totalPerPersonEl.innerText = "";
+  tipPerPersonEl.innerText = "$0.00";
+  totalPerPersonEl.innerText = "$0.00";
 });
 
 // UI elements to update tip/total amount per person
@@ -81,6 +81,14 @@ const totalPerPersonEl = document.querySelector(
 
 //////////// CALC LOGIC ////////////
 function runMath() {
+  // Check if number of people is 0, if so, make the border red to indicate an error
+  if (numberOfPeople === 0) {
+    numberOfPeopleEl.classList.add("error");
+  } else {
+    numberOfPeopleEl.classList.remove("error");
+  }
+
+  // If all inputs are filled, run the math
   if (billAmount && tipPercent && numberOfPeople) {
     tipDecimal = tipPercent / 100 + 1;
     totalAmount = billAmount * tipDecimal;
@@ -88,11 +96,7 @@ function runMath() {
     let tipPerPerson = tipAmount / numberOfPeople;
     let totalPerPerson = totalAmount / numberOfPeople;
 
-    tipPerPersonEl.innerText = tipPerPerson.toFixed();
-    totalPerPersonEl.innerText = totalPerPerson.toFixed();
+    tipPerPersonEl.innerText = `$${tipPerPerson.toFixed()}`;
+    totalPerPersonEl.innerText = `$${totalPerPerson.toFixed()}`;
   }
 }
-
-// Form validation, error messages
-// (error: can't be 0 --> show red border + message)
-// Tests?
