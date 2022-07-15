@@ -275,14 +275,14 @@ body {
     align-items: flex-start;
   }
 
-  .tip-wrapper__tip-per-person,
-  .tip-wrapper__total-per-person {
-    width: 50%;
-  }
-
   .tip-wrapper__tip-amount-per-person,
   .tip-wrapper__total-amount-per-person {
     font-size: 48px;
     color: #26c2ae;
+    width: 48%;
+  }
+
+  .total-amount-area {
+    padding: 40px;
   }
 }
