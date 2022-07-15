@@ -15,54 +15,59 @@
 </head>
 
 <body>
-  <main class="container">
+  <div class="container">
+    <div class="logo"><img src="/images/logo.svg" alt="logo"></div>
     <div class="content">
-      <div class="bill-area">
-        <h2 class="bill-area__header heading">Bill</h2>
-        <form>
-          <input type="text" class="bill-area__amount-input">
-        </form>
-      </div>
-      <div class="tip-area">
-        <h2 class="tip-area__heading heading">Select Tip %</h2>
-        <div class="tip-area__tip-select">
-          <div class="tip-amount" data-tipvalue="5" tabindex="1">5%</div>
-          <div class="tip-amount" data-tipvalue="10" tabindex="1">10%</div>
-          <div class="tip-amount" data-tipvalue="15" tabindex="1">15%</div>
-          <div class="tip-amount" data-tipvalue="25" tabindex="1">25%</div>
-          <div class="tip-amount" data-tipvalue="50" tabindex="1">50%</div>
-          <input class="tip-amount custom-tip" placeholder="Custom" data-tipvalue="custom"></input>
+      <div class="first">
+        <div class="bill-area">
+          <h2 class="bill-area__header heading">Bill</h2>
+          <form>
+            <input type="text" class="bill-area__amount-input">
+          </form>
         </div>
-      </div>
-      <div class="number-people-area">
-        <h2 class="number-people__header heading">Number of People</h2>
-        <form class="number-people-area__form">
-          <input type="text" class="number-people-area__input">
-        </form>
-      </div>
-      <div class="total-amount-area">
-
-        <div class="total-amount-area__tip-wrapper">
-          <div class="tip-wrapper__tip-per-person">
-            <p>Tip Amount</br>
-              <span class="person">/ person</span></p>
+        <div class="tip-area">
+          <h2 class="tip-area__heading heading">Select Tip %</h2>
+          <div class="tip-area__tip-select">
+            <div class="tip-amount" data-tipvalue="5" tabindex="1">5%</div>
+            <div class="tip-amount" data-tipvalue="10" tabindex="1">10%</div>
+            <div class="tip-amount" data-tipvalue="15" tabindex="1">15%</div>
+            <div class="tip-amount" data-tipvalue="25" tabindex="1">25%</div>
+            <div class="tip-amount" data-tipvalue="50" tabindex="1">50%</div>
+            <input class="tip-amount custom-tip" placeholder="Custom" data-tipvalue="custom"></input>
           </div>
-          <div class="tip-wrapper__tip-amount-per-person"></div>
         </div>
+        <div class="number-people-area">
+          <h2 class="number-people__header heading">Number of People</h2>
+          <form class="number-people-area__form">
+            <input type="text" class="number-people-area__input">
+          </form>
+        </div>
+      </div>
+      <div class="second">
+        <div class="total-amount-area">
 
-        <div class="total-amount-area__tip-wrapper">
-          <div class="tip-wrapper__total-per-person">
-            <p>Total</br>
-              <span class="person">/ person</span></p>
+          <div class="total-amount-area__tip-wrapper">
+            <div class="tip-wrapper__tip-per-person">
+              <p>Tip Amount</br>
+                <span class="person">/ person</span></p>
+            </div>
+            <div class="tip-wrapper__tip-amount-per-person">$0.00</div>
           </div>
-          <div class="tip-wrapper__total-amount-per-person"></div>
-        </div>
 
-        <button class="btn-reset">RESET</button>
+          <div class="total-amount-area__tip-wrapper">
+            <div class="tip-wrapper__total-per-person">
+              <p>Total</br>
+                <span class="person">/ person</span></p>
+            </div>
+            <div class="tip-wrapper__total-amount-per-person">$0.00</div>
+          </div>
+
+          <button class="btn-reset">RESET</button>
+        </div>
       </div>
     </div>
 
-  </main>
+  </div>
 
 </body>
 
